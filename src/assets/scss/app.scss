@@ -1,3 +1,36 @@
+@import "./components/header.scss";
+@import "./fonts.scss";
+@import "./reset/reset.scss";
+@import "./components/main.scss";
+@import "./components/footer.scss";
+//font-family: 'Lato';
+//font-family: 'Neue Metana';
+//font-family: 'Inter';
+
 html{
-    background: red;
+    background: rgb(255, 255, 255);
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: normal;
+    .start{
+        background: white;
+        font-size: 75px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 39px;
+        padding: 15.5px 122px;
+        border-radius: 10px;
+        //text-align: center;
+        margin-top: 60px;
+        letter-spacing: -0.02em;
+      }
+    
+}
+
+.container{
+    width: 1364px;
+    //border: solid 2px green;
+    margin: 0 auto;
 }

@@ -1,0 +1,27 @@
+.footer{
+  padding-top: 50px;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  h3{
+    font-family: 'Neue Metana';
+    font-style: bold;
+    font-weight: 900px;
+    font-size: 26px;
+    line-height: 32px;
+    letter-spacing: -0.06em;
+    width: 40%;
+
+  }
+  p{
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: right;
+    letter-spacing: -0.02em;
+    color: #1C1717;
+  }
+}
