@@ -90,7 +90,7 @@
       letter-spacing: -0.02em;
       color: #666666;
     }
-    p{
+    .p-text{
       max-width: 660px;
       padding-right: 160px;
       
@@ -781,6 +781,9 @@
     justify-content: space-between;
     .left-info{
       padding-left: 72px;
+      .adept{
+        display: none;
+      }
       h2{
         font-family: 'Neue Metana';
         font-style: normal;
