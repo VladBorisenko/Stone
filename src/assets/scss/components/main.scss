@@ -549,7 +549,7 @@
       font-size: 32px;
       line-height: 39px;
       text-align: center;
-      width: 100%;
+      
       padding: 15px 0;
       
       text-align: center;
@@ -582,15 +582,17 @@
       border: none;
 
       letter-spacing: -0.02em;
-
-      padding-bottom: -20px;
+      position: relative;
+      left: 50%;
+      transform: translate(-50%, 0);
+      
 
       color: #1C1717;
     }
     .lite{
       border: 1px solid rgb(255, 255, 255);
       border-radius: 30px;
-      padding: 40px 40px 30px 40px;
+      
       h4{
         color: #27AE60;
       }
@@ -611,7 +613,7 @@
       border: 1px solid black;
     }
     .pro{
-      padding: 40px 40px 30px 40px;
+      
       border: 1px solid rgb(255, 255, 255);
       border-radius: 30px;
       
@@ -631,7 +633,7 @@
       border: 1px solid black;
     }
     .max{
-      padding: 40px 40px 30px 40px;
+      
       border: 1px solid rgb(255, 255, 255);
       border-radius: 30px;
       h4{
@@ -656,14 +658,15 @@
 }
 .happy-stones{
   margin-top: 120px;
-  display: flex;
-  justify-content: space-between;
   background: #1C1717;
   border-radius: 42px;
-  .left-section{
-    padding: 100px 108px 100px 72px;
-    width: 50%;
-    h2{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 849px;
+  padding: 100px 0 100px 72px;
+  
+  h2{
       font-family: 'Neue Metana';
       font-style: normal;
       font-weight: 700;
@@ -672,8 +675,9 @@
       letter-spacing: -0.06em;
       padding-bottom: 17px;
       color: #FFFFFF;
-    }
-    h5{
+      max-width: 50%;
+  }
+  h5{
       font-family: 'Inter';
       font-style: normal;
       font-weight: 400;
@@ -682,25 +686,31 @@
       letter-spacing: -0.02em;
       padding-bottom: 255px;
       color: rgba(255, 255, 255, 0.6);
-    }
-    p{
+  }
+  p{
       font-family: 'Inter';
       font-style: normal;
       font-weight: 400;
       font-size: 30px;
       line-height: 44px;
       display: flex;
-      align-items: flex-end;
+      align-items: flex-start;
       letter-spacing: -0.02em;
       color: #FFFFFF;
-    }
+      max-width: 40%;
+      
   }
+  
   .right-section{
     background: #A2E0BC;
     width: 50%;
     border-radius: 40px;
     padding-top: 57px;
     padding-left: 30px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
   }
 }
 
@@ -854,31 +864,31 @@
           z-index: 1;
         }
         .nike:hover{
-          //z-index: 7;
+          z-index: 7;
         }
         .bmw:hover{
           
-          //z-index: 7;
+          z-index: 7;
         }
         .chupa:hover{
           
-          //z-index: 7;
+          z-index: 7;
         }
         .cisco:hover{
           
-          //z-index: 7;
+          z-index: 7;
         }
         .apple:hover{
           
-          //z-index: 7;
+          z-index: 7;
         }
         .adobe:hover{
           
-          //z-index: 7;
+          z-index: 7;
         }
         .amazon:hover{
           
-          //z-index: 7;
+          z-index: 7;
         }
       }
     }

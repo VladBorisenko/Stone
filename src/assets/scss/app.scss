@@ -34,4 +34,32 @@ html{
     width: 1364px;
     //border: solid 2px green;
     margin: 0 auto;
+    .download-btn{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 41px;
+        border: 1px solid #ffffff;
+        padding: 2px 36px;
+        text-align: center;
+        letter-spacing: -0.02em;
+        border-radius: 140px;
+        color: #ffffff;
+        margin-bottom: 70px; 
+    }
+    .catalog-btn{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 41px;
+        border: 1px solid #FFFFFF;
+        border-radius: 140px; 
+        text-align: center;
+        letter-spacing: -0.02em;
+        padding: 2px 46px;
+        margin-bottom: 60px;
+        color: #FFFFFF;
+      }
 }

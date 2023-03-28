@@ -11,3 +11,52 @@ html
         include ../components/header.pug
         include ../components/main.pug
         include ../components/footer.pug
+      
+
+
+
+      script. 
+        
+        
+        const burger = document.querySelector('.burger');
+        const burgerAct = document.querySelector('.burger_active');
+        const menu = document.querySelector('.menu-active');
+        const headfix = document.querySelector('.fixed-header');
+        const openMenu = document.querySelector('.menu-active-open');
+        const header = document.querySelector('.header');
+
+        
+      
+
+          burger.addEventListener('click', () => {
+              burger.classList.toggle('burger_active');
+              menu.classList.toggle('menu-active-open');
+              
+          });
+
+          
+
+
+
+          var prevScrollpos = window.pageYOffset;
+          window.onscroll = function() {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+              headfix.style.top = "0";
+            } else {
+              headfix.style.top = "-95px";
+            }
+            prevScrollpos = currentScrollPos;
+          }
+
+        
+
+        
+
+
+        
+
+        
+
+
+

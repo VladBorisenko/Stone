@@ -4,36 +4,144 @@
     max-width: 288px;
     margin: 0 auto;
     .header{
-      margin: 0;
-      padding-top: 13px;
-      h3{
-        font-size: 20px;
-        line-height: 20px;
-        font-weight: 700;
-        padding-bottom: 11px;
-      }
-      .menu-active{
-        position: relative;
-        background: black;
+      width: 100%;
+      height: 83px;
+      .fixed-header{
         top: 0;
-        right: 0;
-        //right: 0;
-        height: 34px;
-        width: 200px;
-
-        a{
-          color: white;
-          font-size: 10px;
+        position: fixed;
+        z-index: 1;
+        width: 288px;
+        background: rgb(255, 255, 255, 1);
+        transition: all .3s;
+        
+        .fixed-header-content{
+          margin: 0;
+          padding-top: 13px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          position: relative;
+          width: 100%;
+          .logo-nav{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            height: 25px;
+            h3{
+              font-size: 20px;
+              line-height: 20px;
+              font-weight: 700;
+              margin-left: 10px;
+              width: 100%;
+            }
+            .burger{
+              display: block;
+              width: 20px;
+              height: 18px;
+              //border: 1px solid black;
+              position: relative;
+              right: 0;
+              padding: 0;
+              top: 0;
+              left: 0px;
+              border: none;
+              margin-right: 10px;
+              .line{
+                width: 100%;
+                height: 3px;
+                background: #000000;
+                margin: 0 auto;
+                display: block;
+                position: absolute;
+                transform: rotate(0deg);
+                transition: .25s ease-in-out;
+              }
+              .line_first {
+                top: 0;
+              }
+              
+              .line_second, .line_third {
+                  top: 50%;
+                  transform: translateY(-50%);
+              }
+              
+              .line_fourth {
+                  bottom: 0;
+              }
+            }
+            .burger_active{
+              display: block;
+              width: 20px;
+              height: 18px;
+              //border: 1px solid black;
+              position: relative;
+              right: 0;
+              padding: 0;
+              top: 0;
+              left: 0;
+              border: none;
+              margin-right: 10px;
+              .line{
+                width: 100%;
+                height: 3px;
+                background: #000000;
+                margin: 0 auto;
+                display: block;
+                position: absolute;
+                transform: rotate(0deg);
+                transition: .25s ease-in-out;
+              }
+              
+              
+                .line_first, .line_fourth {
+                  opacity: 0;
+                } 
+                .line_second {
+                  transform: translateY(-50%) rotate(45deg);
+                }
+                .line_third {
+                  transform: translateY(-50%) rotate(-45deg);
+                }
+            }
+          }
+          .menu-active, .menu-active-open{
+              background: none;
+              right: 0;
+              border-radius: 20px;
+              height: 40px;
+              width: 100%;
+              
+              align-items: center;
+              margin-bottom: 0;
+              .menu{
+                padding: 0 10px;
+                a{
+                  color: rgb(0, 0, 0);
+                  font-size: 8px;
+                  text-align: center;
+                  text-decoration: none;
+                  border: 1px solid rgb(0, 0, 0);
+                  border-radius: 20px;
+                  padding: 0 10px;
+                  text-align: center;
+                }
+              }
+          }
+          .menu-active{
+            display: none;
+          }
+          .menu-active-open{
+            display: flex;
+          }
+            
+        
         }
-        
-        
-
       }
-      .mobile{
-        display: block;
-      }
+      
     }
+    
     .dark-section{
+      
       padding: 20px 20px 16px 20px;
       border-radius: 20px;
       .top-info{
@@ -188,6 +296,7 @@
       .photo{
         width: 180px;
         height: 180px;
+        
       }
       .text{
         
@@ -222,7 +331,7 @@
     }
     .video-section{
       margin-top: 45px;
-      padding: 30px 20px 4 0px 20px;
+      padding: 30px 20px 40px 20px;
       background: #1C1717;
       border-radius: 20px;
       //height: 1000px;
@@ -324,45 +433,47 @@
       }
     }
     .how-we-works{
-      margin-top: 120px;
+      margin-top: 60px;
       h2{
         font-family: 'Neue Metana';
         font-style: normal;
         font-weight: 700;
-        font-size: 64px;
-        line-height: 78px;
+        font-size: 30px;
+        line-height: 36px;
         text-align: center;
         letter-spacing: -0.06em;
         color: #1C1717;
       }
       .conditions-item{
-        margin: 85px 20px 32px 20px;
+        margin: 40px 20px 20px 20px;
         padding-bottom: 10px;
         display: flex;
-        justify-content: space-between;
-        max-width: 288px;
+        
+        justify-content: none;
+        max-width: 100%;
         gap: 5px;
         flex-wrap: nowrap;
         overflow-x: auto;
         .conditions-card{
+          max-width: 220px;
           flex: 0 0 auto;
           .num{
             font-family: 'Inter';
             font-style: normal;
             font-weight: 400;
-            font-size: 20px;
-            line-height: 24px;
+            font-size: 16px;
+            line-height: 19px;
             letter-spacing: -0.02em;
             color: #666666;
-            padding-bottom: 25px;
+            padding-bottom: 20px;
           }
           h4{
             font-family: 'Inter';
             font-style: normal;
             font-weight: 700;
-            font-size: 20px;
-            line-height: 30px;
-            padding-bottom: 10px;
+            font-size: 16px;
+            line-height: 24px;
+            padding-bottom: 8px;
       
             letter-spacing: -0.02em;
       
@@ -374,8 +485,8 @@
             font-family: 'Inter';
             font-style: normal;
             font-weight: 400;
-            font-size: 20px;
-            line-height: 30px;
+            font-size: 16px;
+            line-height: 24px;
             /* or 150% */
       
             letter-spacing: -0.02em;
@@ -391,18 +502,18 @@
         justify-content: space-between;
         flex-direction: column;
         .description{
-          padding-top: 72px;
-          padding-left: 70px;
-          padding-right: 75px;
-          width: 50%;
+          padding-top: 15px;
+          padding-left: 20px;
+          padding-right: 20px;
+          width: 100%;
           p{
             font-family: 'Inter';
             font-style: normal;
             font-weight: 400;
-            font-size: 20px;
-            line-height: 24px;
-            letter-spacing: -0.02em;
-            padding-bottom: 45px;
+            font-size: 16px;
+            line-height: 19px;
+            letter-spacing: -0.01em;
+            padding-bottom: 20px;
             
     
             color: #666666;
@@ -411,9 +522,9 @@
             font-family: 'Inter';
             font-style: normal;
             font-weight: 700;
-            font-size: 30px;
-            line-height: 44px;
-            padding-bottom: 25px;
+            font-size: 20px;
+            line-height: 30px;
+            padding-bottom: 11px;
     
             letter-spacing: -0.02em;
     
@@ -425,9 +536,9 @@
             font-family: 'Inter';
             font-style: normal;
             font-weight: 400;
-            font-size: 30px;
-            line-height: 44px;
-            padding-bottom: 148px;
+            font-size: 20px;
+            line-height: 30px;
+            padding-bottom: 30px;
     
             letter-spacing: -0.02em;
     
@@ -436,29 +547,31 @@
             color: #1C1717;
           }
           .download-btn{
-            font-family: 'Inter';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 20px;
-            line-height: 41px;
-            border: 1px solid #1C1717;
-            padding: 2px 36px;
-            text-align: center;
-            letter-spacing: -0.02em;
-            border-radius: 140px;
-            color: #1C1717;
-            margin-bottom: 70px;
+            display: none;
           }
         }
         .map-section{
           background: #1C1717;
-          width: 50%;
+          width: 100%;
           border-radius: 20px;
-          padding-top: 120px;
-          padding-left: 10px;
+          padding-top: 27px;
+          padding-left: 0;
+          padding-bottom: 13px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
           .map-img{
             width: 248px;
             height: 279px;
+            margin-left: 20px;
+          }
+          .download-btn{
+            position: relative;
+            bottom: 10px;
+            margin: 30px 0 0 0;
+            padding: 6px 28px;
+            font-size: 16px;
+            line-height: 24px;
           }
         }
       }
@@ -466,40 +579,58 @@
         margin-top: 5px;
         display: flex;
         justify-content: space-between;
-        flex-direction: column;
-        
-        .comfort-img{
-          width: 217px;
-          height: 314px;
-          padding-left: 10px;
-          padding-top: 45px;
+        flex-direction: column-reverse;
+        background: #2F80ED;
+        border-radius: 20px;
+        .comfort-img-section{
+          padding: 10px 0 10px 0;
+          border-radius: 20px;
+          background: white;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          .comfort-img{
+            width: 230px;
+            height: 320px;
+            padding: 0 ;
+          }
+          .catalog-btn{
+            font-size: 16px;
+            line-height: 30px;
+            border: 1px solid #000000;
+            padding: 2px 35px;
+            margin-bottom: 60px;
+            color: #000000;
+            margin-top: 30px;
+          }
         }
         .comfort-section{
           width: 100%;
-          background: #2F80ED;
+          background: none;
           border-radius: 20px;
-          padding: 74px 10px 10px 10px;
+          padding: 20px;
           p{
             font-family: 'Inter';
             font-style: normal;
             font-weight: 400;
-            font-size: 20px;
-            line-height: 24px;
+            font-size: 16px;
+            line-height: 19px;
             letter-spacing: -0.02em;
-            padding-bottom: 43px;
+            padding-bottom: 18px;
     
             color: #FFFFFF;
     
+
           }
           h4{
             font-family: 'Inter';
             font-style: normal;
             font-weight: 700;
-            font-size: 30px;
-            line-height: 44px;
-            padding-bottom: 28px;
+            font-size: 20px;
+            line-height: 30px;
+            padding-bottom: 15px;
             letter-spacing: -0.024em;
-            margin-right: 30px;
+            margin-right: 0;
     
     
             color: #FFFFFF;
@@ -508,60 +639,48 @@
             font-family: 'Inter';
             font-style: normal;
             font-weight: 400;
-            font-size: 30px;
-            line-height: 44px;
+            font-size: 20px;
+            line-height: 30px;
     
             letter-spacing: -0.02em;
-            padding-bottom: 102px;
+            padding-bottom: 5px;
             color: #FFFFFF
           }
           .catalog-btn{
-            font-family: 'Inter';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 20px;
-            line-height: 41px;
-            border: 1px solid #FFFFFF;
-            border-radius: 140px; 
-            text-align: center;
-            letter-spacing: -0.02em;
-            padding: 2px 46px;
-            margin-bottom: 60px;
-    
-            color: #FFFFFF;
+            display: none;
           }
         }
       }
     }
     .tarifes{
-      padding-top: 121px;
+      padding-top: 15px;
       h2{
         font-family: 'Neue Metana';
         font-style: normal;
         font-weight: 700;
-        font-size: 64px;
-        line-height: 78px;
+        font-size: 30px;
+        line-height: 36px;
         text-align: center;
         letter-spacing: -0.06em;
         color: #1C1717;
-        padding-bottom: 60px;
+        padding-bottom: 33px;
       }
       .cards{
         display: flex;
         justify-content: center;
         flex-direction: column;
-        gap: 6px;
+        gap: 55px;
         align-items: center;
-        padding: 0 68px;
+        padding: 11px 30px;
         h3{
           font-family: 'Inter';
           font-style: normal;
           font-weight: 600;
-          font-size: 45px;
-          line-height: 54px;
+          font-size: 20px;
+          line-height: 24px;
           letter-spacing: -0.02em;
-          padding-bottom: 18px;
-          
+          padding-bottom: 14px;
+          text-align: center;
     
           color: #1C1717;
         }
@@ -569,10 +688,10 @@
           font-family: 'Inter';
           font-style: normal;
           font-weight: 400;
-          font-size: 20px;
-          line-height: 30px;
-          padding-bottom: 15px;
-    
+          font-size: 16px;
+          line-height: 24px;
+          padding-bottom: 13px;
+          text-align: center;
           letter-spacing: -0.02em;
     
           
@@ -583,10 +702,10 @@
           font-family: 'Inter';
           font-style: normal;
           font-weight: 600;
-          font-size: 32px;
-          line-height: 39px;
-          padding-bottom: 10px;
-    
+          font-size: 18px;
+          line-height: 22px;
+          padding-bottom: 6px;
+          text-align: center;
           letter-spacing: -0.02em;
         }
         .sale{
@@ -596,20 +715,21 @@
           font-size: 16px;
           line-height: 19px;
           letter-spacing: -0.02em;
-          padding-bottom: 33px;
-          
+          padding-bottom: 17px;
+          text-align: center;
     
           color: #666666;
         }
         .start-btn{
           font-family: 'Inter';
           font-style: normal;
-          font-weight: 600;
-          font-size: 32px;
-          line-height: 39px;
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 24px;
           text-align: center;
-          width: 100%;
-          padding: 15px 0;
+          
+          align-items: center;
+          padding: 14px 87px;
           
           text-align: center;
           letter-spacing: -0.02em;
@@ -622,12 +742,12 @@
           font-family: 'Inter';
           font-style: normal;
           font-weight: 600;
-          font-size: 20px;
+          font-size: 16px;
           line-height: 30px;
-          padding-top: 30px;
-          padding-bottom: 19px;
+          padding-top: 18px;
+          padding-bottom: 10px;
           letter-spacing: -0.02em;
-    
+          text-align: center;
           
     
           color: #1C1717;
@@ -636,20 +756,20 @@
           font-family: 'Inter';
           font-style: normal;
           font-weight: 400;
-          font-size: 20px;
-          line-height: 40px;
+          font-size: 16px;
+          line-height: 26px;
           border: none;
-    
+          text-align: center;
           letter-spacing: -0.02em;
-    
-          padding-bottom: -20px;
+          padding-bottom: none;
+          
     
           color: #1C1717;
         }
         .lite{
           border: 1px solid rgb(255, 255, 255);
           border-radius: 30px;
-          padding: 40px 40px 30px 40px;
+          
           h4{
             color: #27AE60;
           }
@@ -670,7 +790,7 @@
           border: 1px solid black;
         }
         .pro{
-          padding: 40px 40px 30px 40px;
+          
           border: 1px solid rgb(255, 255, 255);
           border-radius: 30px;
           
@@ -690,7 +810,7 @@
           border: 1px solid black;
         }
         .max{
-          padding: 40px 40px 30px 40px;
+          
           border: 1px solid rgb(255, 255, 255);
           border-radius: 30px;
           h4{
@@ -714,56 +834,69 @@
       }
     }
     .happy-stones{
-      margin-top: 120px;
-      display: flex;
-      justify-content: space-between;
-      flex-direction: column;
+      margin-top: 72px;
       background: #1C1717;
-      border-radius: 42px;
-      .left-section{
-        padding: 100px 108px 100px 72px;
-        width: 50%;
-        h2{
+      border-radius: 20px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      height: 849px;
+      padding: 30px 0 100px 0;
+      
+      h2{
           font-family: 'Neue Metana';
           font-style: normal;
           font-weight: 700;
-          font-size: 64px;
-          line-height: 66px;
+          font-size: 30px;
+          line-height: 30px;
           letter-spacing: -0.06em;
-          padding-bottom: 17px;
+          padding-bottom: 7px;
           color: #FFFFFF;
-        }
-        h5{
+          max-width: 100%;
+          text-align: center;
+      }
+      h5{
+          font-family: 'Inter';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 19px;
+          letter-spacing: -0.02em;
+          padding-bottom: 20px;
+          color: rgba(255, 255, 255, 0.6);
+          text-align: center;
+      }
+      p{
           font-family: 'Inter';
           font-style: normal;
           font-weight: 400;
           font-size: 20px;
-          line-height: 24px;
-          letter-spacing: -0.02em;
-          padding-bottom: 255px;
-          color: rgba(255, 255, 255, 0.6);
-        }
-        p{
-          font-family: 'Inter';
-          font-style: normal;
-          font-weight: 400;
-          font-size: 30px;
-          line-height: 44px;
+          line-height: 30px;
           display: flex;
-          align-items: flex-end;
+          align-items: flex-start;
           letter-spacing: -0.02em;
           color: #FFFFFF;
-        }
+          max-width: 100%;
+          padding-left: 20px;
+          padding-right: 20px;
+          
       }
       .right-section{
         background: #A2E0BC;
-        width: 100%;
-        border-radius: 40px;
-        padding-top: 57px;
+        width: 50%;
+        border-radius: 20px;
+        padding-top: 20px;
         padding-left: 10px;
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+        position: relative;
+        right: 0;
+        top: 0;
+        height: max-content;
+        width: 100%;
         img{
           width: 269px;
-          height: 393px;
+          height: 390px;
         }
       }
     }
@@ -778,51 +911,51 @@
       gap: 5px;
       width: 288px;
       margin: 0 auto; 
-      padding-top: 60px;
+      padding-top: 45px;
+      padding-left: 5px;
       .comment-item{
         flex: 0 0 auto;
-        padding: 10px;
-        width: 100%;
+        padding: 15px;
+        width: 90%;
         .title{
           padding-bottom: 20px;
           display: flex;
           align-items: center;
           gap: 20px;
           .nickname{
-            padding-top: 10px;
+            padding-top: 1px;
             h3{
               font-family: 'Inter';
               font-style: normal;
               font-weight: 500;
-              font-size: 20px;
-              line-height: 30px;
-              /* identical to box height, or 150% */
-    
+              font-size: 16px;
+              line-height: 26px;
               letter-spacing: -0.02em;
-    
-              /* Black/10 */
-    
               color: #1C1717;
             }
             h4{
               font-family: 'Inter';
               font-style: normal;
               font-weight: 400;
-              font-size: 16px;
-              line-height: 30px;
+              font-size: 15px;
+              line-height: 25px;
     
               letter-spacing: -0.02em;
     
               color: #666666;
             }
           }
+          img{
+            width: 70px;
+            height: 70px;
+          }
         }
         p{
           font-family: 'Inter';
           font-style: normal;
           font-weight: 400;
-          font-size: 20px;
-          line-height: 30px;
+          font-size: 16px;
+          line-height: 24px;
     
           letter-spacing: -0.02em;
     
@@ -830,21 +963,25 @@
           color: #1C1717;
         }
       }
+      
     }
     .coop-company{
-      padding-top: 100px;
-      margin-top: 120px;
+      padding-top: 20px;
+      margin-top: 75px;
       width: 100%;
       background: #1C1717;
-      border-radius: 40px;
+      border-radius: 20px;
+      position: relative;
       .top-content{
         display: flex;
         justify-content: space-between;
         flex-direction: column;
         .left-info{
-          padding-left: 72px;
+          padding-left: 0;
           .adept{
             display: block;
+            text-align: center;
+            padding-bottom: 10px;
           }
           .h-mane{display: none;}
           h2{
@@ -853,7 +990,8 @@
             line-height: 36px;
             letter-spacing: -0.1em;
             color: #FFFFFF;
-            padding-bottom: 19px;
+            padding-bottom: 15px;
+            text-align: center;
           }
           h5{
             
@@ -866,53 +1004,63 @@
         }
         .right-info{
           h5{
-            font-family: 'Inter';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 20px;
-            line-height: 24px;
-            letter-spacing: -0.02em;
-            color: #FFFFFF;
-            opacity: 0.6;
+            
+            font-size: 16px;
+            line-height: 19px;
             position: relative;
-            left: 97px;
-            padding-bottom: 25px;
+            left: 0;
+            text-align: center;
+            padding-bottom: 7px;
+            
           }
           padding-left: 0;
           .img-company{
             position: relative;
             left: 0;
+            top: 2px;
+            width: 100%;
+            
+            
+            
             img{
-              position: relative;
+              position: absolute;
               width: 40px;
               height: 40px;
             }
             .nike{
               z-index: 7;
+              left: 46px;
             }
             .bmw{
-              left: -29px;
+              left: 71px;
               z-index: 6;
+              //display: none
             }
             .chupa{
-              left: -58px;
+              left: 98px;
               z-index: 5;
+              //display: none
             }
             .cisco{
-              left: -87px;
+              left: 123px;
               z-index: 4;
+              //display: none;
             }
             .apple{
-              left: -116px;
+              left: 150px;
+              top: 0;
               z-index: 3;
+              //display: none;
             }
             .adobe{
-              left: -145px;
+              left: 176px;
               z-index: 2;
+              //display: none;
             }
             .amazon{
-              left: -174px;
+              left: 201px;
               z-index: 1;
+              //display: none;
             }
             .nike:hover{
               //z-index: 7;
@@ -946,11 +1094,11 @@
     
       }
       .middle-content{
-        padding-top: 163px;
+        padding-top: 95px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-bottom: 170px;
+        padding-bottom: 40px;
         h2{
           font-family: 'Neue Metana';
           font-style: normal;
@@ -965,14 +1113,42 @@
         .start{
           font-size: 20px;
           line-height: 24px;
-          padding: 15.5px 90px;
+          padding: 13px 88px;
           border-radius: 10px;
           //text-align: center;
-          margin-top: 30px;
+          margin-top: 20px;
           letter-spacing: -0.02em;
           border: none;
         }
     
+      }
+    }
+    .footer{
+      padding-top: 32px;
+      padding-bottom: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      h3{
+        font-family: 'Neue Metana';
+        font-style: bold;
+        font-weight: 900px;
+        font-size: 20px;
+        line-height: 20px;
+        letter-spacing: -0.04em;
+        width: 40%;
+    
+      }
+      p{
+        
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: right;
+        letter-spacing: -0.02em;
+        color: #1C1717;
       }
     }
 

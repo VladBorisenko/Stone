@@ -10,12 +10,17 @@
   <body>
     <div class="container">
       <div class="header"> 
-        <h3>Stone </h3>
-        <div class="menu-nav menu-active"> 
-          <div class="menu"><a href=""> About Us</a><a href="">How we work?</a><a href="">Feedbacks</a><a href="">Tarifs</a></div>
-          <button class="close"></button>
+        <div class="fixed-header">
+          <div class="fixed-header-content">
+            <div class="logo-nav">
+              <h3>Stone </h3>
+              <button class="burger"><span class="line line_first"></span><span class="line line_second"></span><span class="line line_third"></span><span class="line line_fourth"></span></button>
+            </div>
+            <div class="menu-nav menu-active"> 
+              <div class="menu"><a href=""> About Us</a><a href="">How we work?</a><a href="">Feedbacks</a><a href="">Tarifs</a></div>
+            </div>
+          </div>
         </div>
-        <button class="mobile"></button>
       </div>
       <div class="dark-section"> 
         <div class="top-info">
@@ -110,9 +115,14 @@
             <h5>Lorem ipsum dolor sit amet consectetur adipiscing elit Lorem ipsum dolor sit amet consectetur adipiscing elitLorem ipsum dolor Lorem ipsum dolor sit amet consectetur adipiscing elit Lorem ipsum dolor sit amet consectetur </h5>
             <button class="download-btn">Download</button>
           </div>
-          <div class="map-section"><img class="map-img" src="./assets/imgs/phone.png" alt=""></div>
+          <div class="map-section"><img class="map-img" src="./assets/imgs/phone.png" alt="">
+            <button class="download-btn">Download</button>
+          </div>
         </div>
-        <div class="comfort-items"> <img class="comfort-img" src="./assets/imgs/comfort-img.png" alt="">
+        <div class="comfort-items"> 
+          <div class="comfort-img-section"><img class="comfort-img" src="./assets/imgs/comfort-img.png" alt="">
+            <button class="catalog-btn">Catalog</button>
+          </div>
           <div class="comfort-section"> 
             <p>Comfort</p>
             <h4>No need to worry about accessories</h4>
@@ -126,46 +136,44 @@
         <div class="cards"> 
           <div class="lite"> 
             <h3>Lite</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Ut</p>
             <h4>10$/per walking</h4>
             <p class="sale">-3% on the next walking</p>
             <button class="start-btn">Start </button>
             <h5>Lorem ipsum dolor sit amet</h5>
-            <button class="add-btn">+ Lorem ipsum dolor sit amet</button>
-            <button class="add-btn">+ Lorem ipsum dolor sit amet</button>
-            <button class="add-btn">+ Lorem ipsum dolor sit amet</button>
+            <button class="add-btn">+ Lorem ipsum dolor sit </button>
+            <button class="add-btn">+ Lorem ipsum dolor sit </button>
+            <button class="add-btn">+ Lorem ipsum dolor sit </button>
           </div>
           <div class="pro"> 
             <h3>Pro</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Ut</p>
             <h4>299$/yearly</h4>
             <p class="sale">-5% on the next year</p>
             <button class="start-btn">Start </button>
             <h5>Lorem ipsum dolor sit amet</h5>
-            <button class="add-btn">+ Lorem ipsum dolor sit amet</button>
-            <button class="add-btn">+ Lorem ipsum dolor sit amet</button>
-            <button class="add-btn">+ Lorem ipsum dolor sit amet</button>
+            <button class="add-btn">+ Lorem ipsum dolor sit </button>
+            <button class="add-btn">+ Lorem ipsum dolor sit </button>
+            <button class="add-btn">+ Lorem ipsum dolor sit </button>
           </div>
           <div class="max">
             <h3>Max</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Ut</p>
             <h4>Individual</h4>
             <p class="sale">-3% on the next walking</p>
             <button class="start-btn">Start </button>
             <h5>Lorem ipsum dolor sit amet</h5>
-            <button class="add-btn">+ Lorem ipsum dolor sit amet</button>
-            <button class="add-btn">+ Lorem ipsum dolor sit amet</button>
-            <button class="add-btn">+ Lorem ipsum dolor sit amet</button>
+            <button class="add-btn">+ Lorem ipsum dolor sit </button>
+            <button class="add-btn">+ Lorem ipsum dolor sit </button>
+            <button class="add-btn">+ Lorem ipsum dolor sit </button>
           </div>
         </div>
       </div>
       <div class="happy-stones"> 
-        <div class="left-section"> 
-          <h2>Ouer happy stones</h2>
-          <h5>Happy you, happy we</h5>
-          <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Lorem ipsum dolor sit amet consectetur adipiscing elitLorem ipsum dolor Lcing elitLorem ipsum dolor</p>
-        </div>
+        <h2>Ouer happy stones</h2>
+        <h5>Happy you, happy we</h5>
         <div class="right-section"><img src="./assets/imgs/photo-stones.png" alt=""></div>
+        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Lorem ipsum dolor sit amet consectetur adipiscing elitLorem ipsum dolor Lcing elitLorem ipsum dolor</p>
       </div>
       <div class="comments"> 
         <div class="comment-item one">
@@ -227,5 +235,37 @@
         <p>@2022 Stone All rignt reserved</p>
       </div>
     </div>
+    <script>
+      const burger = document.querySelector('.burger');
+      const burgerAct = document.querySelector('.burger_active');
+      const menu = document.querySelector('.menu-active');
+      const headfix = document.querySelector('.fixed-header');
+      const openMenu = document.querySelector('.menu-active-open');
+      const header = document.querySelector('.header');
+      
+      
+      
+      
+        burger.addEventListener('click', () => {
+            burger.classList.toggle('burger_active');
+            menu.classList.toggle('menu-active-open');
+            
+        });
+      
+        
+      
+      
+      
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+          var currentScrollPos = window.pageYOffset;
+          if (prevScrollpos > currentScrollPos) {
+            headfix.style.top = "0";
+          } else {
+            headfix.style.top = "-95px";
+          }
+          prevScrollpos = currentScrollPos;
+        }
+    </script>
   </body>
 </html>
