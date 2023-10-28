@@ -26,7 +26,17 @@ html{
         //text-align: center;
         margin-top: 60px;
         letter-spacing: -0.02em;
-      }
+        transition: all 0.3s;
+        //border: 2px solid #FFFFFF;
+    }
+
+    .start:hover{
+        color: #FFFFFF;
+        background: none;
+        border: 2px solid #1C1717;
+        box-shadow: inset 0px 0px 25px 0px rgba(255, 255, 255, 1);
+
+    }
     
 }
 
@@ -45,8 +55,15 @@ html{
         text-align: center;
         letter-spacing: -0.02em;
         border-radius: 140px;
-        color: #ffffff;
+        color: #000000;
         margin-bottom: 70px; 
+        transition: all 0.3s;
+        
+    }
+    .download-btn:hover{
+        color: #FFFFFF;
+        background: #000000;
+        border: 1px solid #000000;
     }
     .catalog-btn{
         font-family: 'Inter';
@@ -61,5 +78,12 @@ html{
         padding: 2px 46px;
         margin-bottom: 60px;
         color: #FFFFFF;
+        transition: all 0.3s;
+        
       }
+    .catalog-btn:hover{
+        color: #2F80ED;
+        background: #ffffff;
+        border: 1px solid #FFFFFF;
+    }
 }

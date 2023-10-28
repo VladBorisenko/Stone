@@ -64,8 +64,32 @@
     }
     .links{
       margin-top: 23px;
+      display: flex;
+
       .gmail{
         margin-right: 23px;
+        width: 30px;
+        height: 30px;
+        border: 1px solid #1C1717;
+        border-radius: 50%;
+        display: block;
+        padding-top: 2px;
+        padding-left: 2.5px;
+        transition: all 0.3s;
+      }
+      .inst{
+        width: 30px;
+        height: 30px;
+        border: 1px solid #1C1717;
+        border-radius: 50%;
+        display: block;
+        padding-top: 2px;
+        padding-left: 2.5px;
+        transition: all 0.3s;
+      }
+      a:hover{
+        border: 1px solid rgb(255, 255, 255);
+        background: #574603;
       }
     }
     
@@ -290,55 +314,70 @@
     color: #1C1717;
   }
   .conditions-item{
-    margin: 85px 94px 32px 95px;
+   // margin-left: 43px;
+    margin: 0 auto;
+    margin-top: 65px;
     display: flex;
-    justify-content: space-between;
-    max-width: 1220px;
-    gap: 50px;
+    justify-content: center;
+    max-width: 1250px;
+    
+    gap: 5px;
+    
     //align-items: center;
-    .num{
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 20px;
-      line-height: 24px;
-      letter-spacing: -0.02em;
-      color: #666666;
-      padding-bottom: 25px;
-    }
-    h4{
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 700;
-      font-size: 20px;
-      line-height: 30px;
-      padding-bottom: 10px;
+    .conditions-card{
+      background-color: rgba(242, 242, 242, 1);
+      max-width: 301px;
+      height: 291px;
+      padding: 25px;
+      border-radius: 20px;
+      .num{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: -0.02em;
+        color: #666666;
+        padding-bottom: 25px;
+      }
+      h4{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 30px;
+        padding-bottom: 10px;
 
-      letter-spacing: -0.02em;
+        letter-spacing: -0.02em;
 
-      /* Black/10 */
+        /* Black/10 */
 
-      color: #1C1717;
-    }
-    h5{
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 20px;
-      line-height: 30px;
-      /* or 150% */
+        color: #1C1717;
+      }
+      h5{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+        /* or 150% */
 
-      letter-spacing: -0.02em;
+        letter-spacing: -0.02em;
 
-      /* Black/10 */
+        /* Black/10 */
 
-      color: #1C1717;
+        color: #1C1717;
+      }
     }
   }
   .map-items{
+    margin-top: 5px;
     display: flex;
     justify-content: space-between;
+    gap: 5px;
     .description{
+      background:rgba(242, 242, 242, 1);
+      border-radius: 20px;
       padding-top: 72px;
       padding-left: 70px;
       padding-right: 75px;
@@ -384,6 +423,7 @@
         color: #1C1717;
       }
       .download-btn{
+        //display: none;
         font-family: 'Inter';
         font-style: normal;
         font-weight: 400;
@@ -394,7 +434,7 @@
         text-align: center;
         letter-spacing: -0.02em;
         border-radius: 140px;
-        color: #1C1717;
+        //color: #1C1717;
         margin-bottom: 70px;
       }
     }
@@ -404,20 +444,35 @@
       border-radius: 20px;
       padding-top: 120px;
       padding-left: 110px;
+      .download-btn{
+        display: none;
+      }
     }
   }
   .comfort-items{
     margin-top: 5px;
     display: flex;
     justify-content: space-between;
-    
-    .comfort-img{
-      height: 780px;
-      padding-left: 70px;
-      padding-top: 45px;
+    width: 100%;
+    gap: 5px;
+    .comfort-img-section{
+      background:rgba(242, 242, 242, 1);
+      border-radius: 20px;
+      height: 828px;
+      width: 50%;
+      .catalog-btn{
+        display: none;
+      }
+      .comfort-img{
+        width: 90%;
+        height: 780px;
+        padding-left: 70px;
+        padding-top: 45px;
+      }
     }
     .comfort-section{
       width: 50%;
+      height: 828px;
       background: #2F80ED;
       border-radius: 20px;
       padding: 74px 70px 10px 74px;
@@ -468,15 +523,15 @@
         text-align: center;
         letter-spacing: -0.02em;
         padding: 2px 46px;
-        margin-bottom: 60px;
-
-        color: #FFFFFF;
+        margin-bottom: 20px;
+        //display: none;
+        //color: #FFFFFF;
       }
     }
   }
 }
 .tarifes{
-  padding-top: 121px;
+  padding-top: 55px;
   h2{
     font-family: 'Neue Metana';
     font-style: normal;
@@ -489,9 +544,11 @@
     padding-bottom: 60px;
   }
   .cards{
+    
+    
     display: flex;
     justify-content: center;
-    gap: 6px;
+    gap: 5px;
     align-items: center;
     padding: 0 68px;
     h3{
@@ -549,9 +606,9 @@
       font-size: 32px;
       line-height: 39px;
       text-align: center;
-      
+      width: 100%;
       padding: 15px 0;
-      
+      right: 0;
       text-align: center;
       letter-spacing: -0.02em;
 
@@ -577,22 +634,28 @@
       font-family: 'Inter';
       font-style: normal;
       font-weight: 400;
-      font-size: 20px;
+      font-size: 23px;
       line-height: 40px;
       border: none;
-
+      padding: 0;
       letter-spacing: -0.02em;
       position: relative;
-      left: 50%;
+      left: 40%;
       transform: translate(-50%, 0);
-      
-
+      margin: 0 auto;
+      width: 100%;
       color: #1C1717;
+    }
+    .add-btn:hover{
+      color: #000000;
+      font-weight: 800;
     }
     .lite{
       border: 1px solid rgb(255, 255, 255);
       border-radius: 30px;
-      
+      background: rgba(242, 242, 242, 1);
+      padding: 40px;
+      width: 406px;
       h4{
         color: #27AE60;
       }
@@ -605,17 +668,20 @@
       .start-btn:hover{
         border: 1px solid #27AE60;
         color: #27AE60;
-        background: #FFFFFF;
+        background: rgba(242, 242, 242, 1);
       }
 
     }
     .lite:hover{
-      border: 1px solid black;
+      border: 1px solid #27AE60;
+      background: #FFFFFF;
     }
     .pro{
-      
+      background: rgba(242, 242, 242, 1);
       border: 1px solid rgb(255, 255, 255);
       border-radius: 30px;
+      padding: 40px;
+      width: 406px;
       
       .start-btn{
         background: #1C1717;
@@ -626,16 +692,19 @@
       .start-btn:hover{
         border: 1px solid #000000;
         color: #000000;
-        background: #FFFFFF;
+        background: rgba(242, 242, 242, 1);
       }
     }
     .pro:hover{
       border: 1px solid black;
+      background: #FFFFFF;
     }
     .max{
-      
+      background: rgba(242, 242, 242, 1);
       border: 1px solid rgb(255, 255, 255);
       border-radius: 30px;
+      padding: 40px;
+      width: 406px;
       h4{
         color: #2F80ED;
       }
@@ -648,16 +717,17 @@
       .start-btn:hover{
         border: 1px solid #2F80ED;
         color: #2F80ED;
-        background: #FFFFFF;
+        background: rgba(242, 242, 242, 1);
       }
     }
     .max:hover{
-      border: 1px solid black;
+      border: 1px solid #2F80ED;
+      background: #FFFFFF;
     }
   }
 }
 .happy-stones{
-  margin-top: 120px;
+  margin-top: 110px;
   background: #1C1717;
   border-radius: 42px;
   position: relative;
@@ -833,64 +903,77 @@
       .img-company{
         position: relative;
         left: 95px;
+        color: rgba(0, 0, 0, 1);
         img{
           position: relative;
         }
         .nike{
           z-index: 7;
+          transition: all 0.3s;
         }
         .bmw{
           left: -29px;
           z-index: 6;
+          transition: all 0.3s;
         }
         .chupa{
           left: -58px;
           z-index: 5;
+          transition: all 0.3s;
         }
         .cisco{
           left: -87px;
           z-index: 4;
+          transition: all 0.3s;
         }
         .apple{
           left: -116px;
           z-index: 3;
+          transition: all 0.3s;
         }
         .adobe{
           left: -145px;
           z-index: 2;
+          transition: all 0.3s;
+          
         }
         .amazon{
           left: -174px;
           z-index: 1;
+          transition: all 0.3s;
         }
         .nike:hover{
           z-index: 7;
+          filter: drop-shadow(0px 0px 25px rgba(0,0,0,1));
         }
         .bmw:hover{
-          
           z-index: 7;
+          filter: drop-shadow(0px 0px 25px rgba(0,0,0,1));
         }
         .chupa:hover{
-          
+          filter: drop-shadow(0px 0px 25px rgba(0,0,0,1));
           z-index: 7;
         }
         .cisco:hover{
-          
+          filter: drop-shadow(0px 0px 25px rgba(0,0,0,1));
           z-index: 7;
         }
         .apple:hover{
-          
+          filter: drop-shadow(0px 0px 25px rgba(0,0,0,1));
           z-index: 7;
         }
         .adobe:hover{
-          
+          filter: drop-shadow(0px 0px 25px rgba(0,0,0,1));
           z-index: 7;
         }
         .amazon:hover{
-          
+          filter: drop-shadow(0px 0px 25px rgba(0,0,0,1));
           z-index: 7;
         }
       }
+      
+
+      
     }
 
   }
